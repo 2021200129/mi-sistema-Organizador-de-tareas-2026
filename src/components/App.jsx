@@ -4,6 +4,7 @@ import { today } from '../data/defaults'
 import ProjectsView from './ProjectsView'
 import EnergiaView from './EnergiaView'
 import RealidadView from './RealidadView'
+import DashboardView from './DashboardView'
 import './App.css'
 
 const NAV_MAIN = [
@@ -13,6 +14,7 @@ const NAV_MAIN = [
 ]
 
 const NAV_MORE = [
+  ['dashboard', '🗺', 'Dashboard', 'Resumen completo de tu día'],
   ['proyectos', '🗂', 'Proyectos', 'Organiza tus metas en pasos'],
   ['progreso', '📊', 'Progreso', 'Rachas y estado del hogar'],
   ['realidad', '🌍', 'Realidad', 'Tu tiempo real disponible hoy'],
@@ -119,6 +121,8 @@ export default function App() {
         <HorizonteView items={items} />
       ) : view === 'realidad' ? (
         <RealidadView />
+      ) : view === 'dashboard' ? (
+        <DashboardView onNavigate={switchView} />
       ) : (
         <div className="scroll-area">
           {filtered.length === 0 ? (

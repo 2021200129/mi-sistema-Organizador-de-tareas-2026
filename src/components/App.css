@@ -403,3 +403,163 @@ html, body, #root {
 }
 
 .bloque-delete:hover { color: var(--vencida); }
+
+/* DASHBOARD */
+.dash-progress-card {
+  background: var(--ink);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.dash-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.dash-progress-title {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.dash-progress-num {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.dash-progress-num span {
+  font-size: 16px;
+  opacity: 0.4;
+}
+
+.dash-progress-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.dash-progress-fill {
+  height: 100%;
+  background: var(--ok);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.dash-progress-pct {
+  font-size: 11px;
+  opacity: 0.5;
+}
+
+/* MINI CARDS */
+.dash-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.dash-mini-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.dmc-icon { font-size: 20px; margin-bottom: 6px; }
+.dmc-val { font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 3px; }
+.dmc-label { font-size: 10px; color: var(--muted); line-height: 1.3; }
+
+/* RACHAS */
+.dash-rachas {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.dash-racha-item {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dri-name { font-size: 13px; font-weight: 600; color: var(--ink); }
+.dri-streak { display: flex; align-items: baseline; gap: 3px; }
+.dri-num { font-size: 20px; font-weight: 800; color: var(--racha); }
+.dri-label { font-size: 11px; color: var(--muted); }
+
+/* BLOQUES */
+.dash-bloques {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.dash-bloque {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.db-emoji { font-size: 18px; flex-shrink: 0; }
+.db-nombre { font-size: 13px; font-weight: 600; color: var(--ink); flex: 1; }
+.db-hora { font-size: 11px; color: var(--muted); font-weight: 500; }
+
+/* ACCESOS RÁPIDOS */
+.dash-accesos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.dash-acceso {
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  text-align: left;
+}
+
+.dash-acceso:active { transform: scale(0.97); }
+.da-icon { font-size: 20px; flex-shrink: 0; }
+.da-label { font-size: 13px; font-weight: 600; color: var(--ink); }
+
+.dash-ver-mas {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: right;
+  margin-bottom: 4px;
+}
