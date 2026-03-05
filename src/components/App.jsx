@@ -3,6 +3,8 @@ import { useItems, getUrgency, getRachaStreak, getLast7Days } from '../hooks/use
 import { today } from '../data/defaults'
 import './App.css'
 
+import ProjectsView from './ProjectsView'
+
 export default function App() {
   const { items, toggleDone, addItem } = useItems()
   const [filter, setFilter] = useState('todo')
@@ -82,6 +84,8 @@ export default function App() {
       {/* LIST or STATS */}
       {view === 'stats' ? (
         <StatsView items={items} />
+      ) : view === 'proyectos' ? (
+        <ProjectsView />
       ) : (
         <div className="scroll-area">
           {filtered.length === 0 ? (
@@ -120,7 +124,7 @@ export default function App() {
 
       {/* BOTTOM NAV */}
       <div className="bottom-nav">
-        {[['hoy','☀️','Hoy'],['todo','📋','Todo'],['stats','📊','Progreso']].map(([k,icon,label]) => (
+        {[['hoy','☀️','Hoy'],['todo','📋','Todo'],['proyectos','🗂','Proyectos'],['stats','📊','Progreso']].map(([k,icon,label]) => (
           <button key={k} className={`nav-item${view===k?' active':''}`} onClick={() => setView(k)}>
             <span className="nav-icon">{icon}</span>
             <span className="nav-label">{label}</span>

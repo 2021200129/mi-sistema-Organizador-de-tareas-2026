@@ -53,3 +53,21 @@ export const DEFAULT_ITEMS = [
     lastDone: daysAgo(1), rachaHistory: []
   },
 ];
+
+export const DEFAULT_PROJECTS = [
+  {
+    id: 101,
+    name: 'Sistema de limpieza del hogar',
+    why: 'Vivir en un espacio ordenado sin tener que recordar qué falta',
+    doneWhen: 'Tengo una lista de tareas recurrentes con frecuencia definida',
+    area: 'hogar',
+    status: 'activo',
+    steps: [
+      { id: 1, name: 'Identificar todas las zonas del hogar', done: true },
+      { id: 2, name: 'Listar tareas de limpieza por zona', done: true },
+      { id: 3, name: 'Asignar frecuencia a cada tarea', done: false, isNext: true },
+      { id: 4, name: 'Decidir quién hace cada tarea', done: false },
+      { id: 5, name: 'Elegir dónde vivirá el sistema', done: false },
+    ]
+  }
+]

@@ -150,3 +150,58 @@ html, body, #root {
 .toggle.on::after { transform: translateX(18px); }
 .submit-btn { width: 100%; padding: 14px; background: var(--ink); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 6px; font-family: inherit; transition: transform 0.12s; }
 .submit-btn:active { transform: scale(0.98); }
+
+/* PROJECTS */
+.proj-back { font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; padding: 4px 0 16px; display: inline-block; }
+.proj-back:active { opacity: 0.6; }
+
+.proj-detail-header { margin-bottom: 16px; }
+.proj-detail-name { font-size: 20px; font-weight: 800; color: var(--ink); margin: 8px 0 12px; line-height: 1.2; }
+.proj-area-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; }
+.proj-why { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
+.proj-why-label { font-weight: 700; color: var(--ink); display: block; margin-bottom: 2px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+.proj-progress-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.proj-progress-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.proj-progress-fill { height: 100%; background: var(--ok); border-radius: 3px; transition: width 0.4s ease; }
+.proj-progress-label { font-size: 11px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+
+.next-action-card { background: rgba(58,158,106,0.08); border: 1.5px solid rgba(58,158,106,0.25); border-radius: 12px; padding: 12px 14px; margin-bottom: 4px; }
+.na-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ok); margin-bottom: 4px; }
+.na-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+
+.step-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 6px; display: flex; align-items: flex-start; gap: 10px; }
+.step-card.done { opacity: 0.4; }
+.step-card.done .step-name { text-decoration: line-through; }
+.step-card.next { border-color: rgba(58,158,106,0.3); background: rgba(58,158,106,0.04); }
+.step-info { flex: 1; cursor: pointer; }
+.step-name { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.step-next-label { font-size: 10px; font-weight: 700; color: var(--ok); text-transform: uppercase; letter-spacing: 0.08em; }
+.step-set-next { font-size: 10px; color: var(--muted); }
+
+.add-step-form { margin-top: 8px; }
+.add-step-btns { display: flex; gap: 8px; margin-top: 8px; }
+.step-btn-cancel { flex: 1; padding: 10px; background: transparent; border: 1.5px solid var(--border); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; font-family: inherit; }
+.step-btn-add { flex: 1; padding: 10px; background: var(--ink); border: none; border-radius: 10px; font-size: 13px; font-weight: 600; color: white; cursor: pointer; font-family: inherit; }
+.add-step-trigger { width: 100%; margin-top: 8px; padding: 11px; background: transparent; border: 1.5px dashed var(--border); border-radius: 12px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; font-family: inherit; transition: all 0.15s; }
+.add-step-trigger:hover { border-color: var(--ink); color: var(--ink); }
+
+.status-row { display: flex; gap: 8px; margin-bottom: 24px; }
+.status-btn { flex: 1; padding: 9px; background: transparent; border: 1.5px solid var(--border); border-radius: 10px; font-size: 12px; font-weight: 600; color: var(--muted); cursor: pointer; font-family: inherit; text-transform: capitalize; transition: all 0.15s; }
+.status-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+
+.proj-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; padding: 14px 16px; margin-bottom: 8px; cursor: pointer; transition: transform 0.12s; }
+.proj-card:active { transform: scale(0.985); }
+.proj-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.proj-name { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.proj-next { font-size: 11px; color: var(--ok); font-weight: 600; margin-bottom: 10px; }
+.proj-step-count { font-size: 11px; color: var(--muted); font-weight: 500; }
+.proj-bar-wrap { display: flex; align-items: center; gap: 8px; }
+.proj-bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.proj-bar-fill { height: 100%; background: var(--ok); border-radius: 2px; transition: width 0.4s ease; }
+.proj-pct { font-size: 10px; font-weight: 700; color: var(--muted); }
+
+.drag-handle { font-size: 16px; color: var(--border); cursor: grab; padding: 2px 0 0 4px; flex-shrink: 0; }
+.drag-handle:active { cursor: grabbing; }
+.step-edit-btn { background: transparent; border: none; cursor: pointer; font-size: 14px; padding: 0 4px; opacity: 0.5; flex-shrink: 0; }
+.step-edit-btn:hover { opacity: 1; }
