@@ -79,3 +79,11 @@ export const DEFAULT_PROJECTS = [
     ]
   }
 ]
+
+export const DEFAULT_TIEMPO_FIJO = [
+  { id: 1, nombre: 'Sueño', emoji: '😴', horaInicio: '23:00', horaFin: '07:00', dias: [0,1,2,3,4,5,6] },
+  { id: 2, nombre: 'Desayuno', emoji: '🍳', horaInicio: '07:00', horaFin: '07:30', dias: [0,1,2,3,4,5,6] },
+  { id: 3, nombre: 'Almuerzo', emoji: '🍽', horaInicio: '13:00', horaFin: '14:00', dias: [0,1,2,3,4,5,6] },
+  { id: 4, nombre: 'Cena', emoji: '🌙', horaInicio: '20:00', horaFin: '21:00', dias: [0,1,2,3,4,5,6] },
+  { id: 5, nombre: 'Clases', emoji: '📚', horaInicio: '08:00', horaFin: '13:00', dias: [1,2,3,4,5] },
+]

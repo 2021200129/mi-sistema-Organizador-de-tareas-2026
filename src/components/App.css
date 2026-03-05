@@ -273,3 +273,133 @@ html, body, #root {
 .more-icon { font-size: 22px; }
 .more-label { font-size: 13px; font-weight: 700; color: var(--ink); }
 .more-desc { font-size: 10px; color: var(--muted); line-height: 1.3; }
+
+/* REALIDAD VIEW */
+.realidad-resumen {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 14px;
+  gap: 8px;
+}
+
+.realidad-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.rs-valor {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.rs-label {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.realidad-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.realidad-barra-wrap { margin-bottom: 20px; }
+
+.realidad-barra {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.realidad-barra-fill {
+  height: 100%;
+  background: var(--vencida);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.realidad-barra-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* DIAS SELECTOR */
+.dias-selector {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.dia-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  color: var(--muted);
+  background: transparent;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.dia-btn.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+/* BLOQUE CARD */
+.bloque-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bloque-emoji { font-size: 22px; flex-shrink: 0; }
+
+.bloque-info { flex: 1; }
+
+.bloque-nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.bloque-hora {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.bloque-delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.bloque-delete:hover { color: var(--vencida); }

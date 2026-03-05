@@ -3,6 +3,7 @@ import { useItems, getUrgency, getRachaStreak, getLast7Days } from '../hooks/use
 import { today } from '../data/defaults'
 import ProjectsView from './ProjectsView'
 import EnergiaView from './EnergiaView'
+import RealidadView from './RealidadView'
 import './App.css'
 
 const NAV_MAIN = [
@@ -14,6 +15,7 @@ const NAV_MAIN = [
 const NAV_MORE = [
   ['proyectos', '🗂', 'Proyectos', 'Organiza tus metas en pasos'],
   ['progreso', '📊', 'Progreso', 'Rachas y estado del hogar'],
+  ['realidad', '🌍', 'Realidad', 'Tu tiempo real disponible hoy'],
   ['limbo', '🌫', 'Limbo', 'Ideas sin clasificar todavía'],
   ['balance', '⚖️', 'Balance', 'Carga por área esta semana'],
   ['horizonte', '⏳', 'Horizonte', 'Lo que se viene próximamente'],
@@ -115,6 +117,8 @@ export default function App() {
         <BalanceView items={items} />
       ) : view === 'horizonte' ? (
         <HorizonteView items={items} />
+      ) : view === 'realidad' ? (
+        <RealidadView />
       ) : (
         <div className="scroll-area">
           {filtered.length === 0 ? (
@@ -240,7 +244,7 @@ function StatsView({ items }) {
   return (
     <div className="stats-view">
       <div className="stat-card">
-        <div class="stat-title">Rachas de hábitos</div>
+        <div className="stat-title">Rachas de hábitos</div>
         {habitos.length === 0
           ? <div className="stat-empty">No tienes hábitos con racha todavía.</div>
           : habitos.map(h => (
